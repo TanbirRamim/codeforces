@@ -1,7 +1,8 @@
+// tanbir ramim
+
 #include <bits/stdc++.h>
 using namespace std;
 
-//{
 #define si(a) scanf("%d", &a)
 #define sii(a, b) scanf("%d %d", &a, &b);
 #define siii(a, b, c) scanf("%d %d %d", &a, &b, &c);
@@ -39,7 +40,6 @@ typedef long long i64;
 typedef unsigned long long ull;
 typedef pair<int, int> pii;
 typedef pair<long long, long long> pll;
-//}
 
 const int maxn = 1e5 + 5;
 
