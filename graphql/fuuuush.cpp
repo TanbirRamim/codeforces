@@ -49,7 +49,7 @@ vector<int> vector_creator(int **arr, int n, int starting_vertex, bool *visited)
             if (i == current_element)
             {
                 continue;
-            }
+                        }
             if (visited[i])
             {
                 continue;
