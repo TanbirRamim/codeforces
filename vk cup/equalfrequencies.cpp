@@ -1,67 +1,86 @@
+// 3bewildered 3 //
 #include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     int t;
+    int index = -1;
+    int counter;
     cin >> t;
     while (t--)
     {
-        int n;
-        cin >> n;
-        int a[26] = {};
-        string s;
-        for (int i = 0; i < n; i++)
+        int myNumber;
+
+        cin >> myNumber;
+
+        int myArray[26] = {}; // 26 alphabets
+
+        string myString; // string to store the input
+
+        for (int i = 0; i < myNumber; i++)
         {
-            char c;
-            cin >> c;
-            s += c;
-            a[(int)(c - 'a')]++;
+            char myCharacter;
+            cin >> myCharacter;
+            myString += myCharacter;
+            myArray[(int)(myCharacter - 'a')]++;
         }
         int ans = INT_MAX;
-        int ind = -1;
+
         for (int i = 0; i < 26; i++)
         {
-            int count = i + 1;
-            if (n % count != 0)
+            counter = i + 1;
+
+            if (myNumber % counter != 0)
+            {
                 continue;
-            int z = n / count;
-            priority_queue<int> pq;
+            }
+
+            int mark = myNumber / counter;
+
+            priority_queue<int> myQueue;
+
             for (int i = 0; i < 26; i++)
             {
-                pq.push(a[i]);
+                myQueue.push(myArray[i]);
             }
-            int p = 0;
-            while (count--)
+
+            int press = 0;    // number of presses
+            while (counter--) // counter is the number of alphabets
             {
-                int x = pq.top();
-                pq.pop();
-                p += max(0, z - x);
+                int x = myQueue.top();
+                myQueue.pop();
+                press += max(0, mark - x);
             }
-            if (ans > p)
+            if (ans > press)
             {
-                ans = p;
-                ind = i + 1;
+                ans = press;
+                index = i + 1;
             }
         }
-        priority_queue<pair<int, int>> pq;
+        priority_queue<pair<int, int>> myQueue; // pair of frequency and index
+
         int hash[26] = {};
         for (int i = 0; i < 26; i++)
         {
-            pq.push(make_pair(a[i], i));
+            myQueue.push(make_pair(myArray[i], i));
             hash[i] = INT_MAX;
         }
-        int z = n / ind;
-        while (ind--)
+        int mark = myNumber / index;
+        while (index--)
         {
-            int k = pq.top().second;
-            int l = pq.top().first;
-            pq.pop();
-            hash[k] = l - z;
+            int k = myQueue.top().second;
+
+            int l = myQueue.top().first;
+
+            myQueue.pop();
+
+            hash[k] = l - mark;
         }
-        char x[n];
-        for (int i = 0; i < n; i++)
+        char xenon[myNumber];
+
+        for (int i = 0; i < myNumber; i++)
         {
-            int k = (int)(s[i] - 'a');
+            int k = (int)(myString[i] - 'a');
             if (hash[k] == INT_MAX)
             {
                 for (int j = 0; j < 26; j++)
@@ -69,7 +88,9 @@ int main()
                     if (hash[j] < 0)
                     {
                         hash[j]++;
-                        x[i] = char(j + (int)('a'));
+
+                        xenon[i] = char(j + (int)('a')); // j + (int)('a') is the ascii value of the character
+
                         break;
                     }
                 }
@@ -82,18 +103,27 @@ int main()
                     if (hash[j] < 0)
                     {
                         hash[j]++;
-                        x[i] = char(j + (int)('a'));
-                        break;
+
+                        xenon[i] = char(j + (int)('a'));
+
+                        break; // break the loop
                     }
                 }
             }
             else
-                x[i] = char(k + (int)('a'));
+                xenon[i] = char(k + (int)('a')); // if hash[k] == 0
         }
-        cout << ans << "\n";
-        for (int i = 0; i < n; i++)
-            cout << x[i];
-        cout << "\n";
+
+        cout << ans << endl;
+
+        for (int i = 0; i < myNumber; i++)
+        {
+            cout << xenon[i]; // print the string
+        }
+
+        cout << endl;
     }
+
     return 0;
 }
+// code ends here //
