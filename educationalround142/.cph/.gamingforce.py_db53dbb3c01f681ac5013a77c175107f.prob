@@ -1,0 +1,1 @@
+{"name":"Local: gamingforce","url":"e:\\codeforces\\educationalround142\\gamingforce.py","tests":[{"id":1674573369564,"input":"3\n4\n1 2 1 2\n3\n2 4 2\n5\n1 2 3 4 5\n","output":"3\n3\n5\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\codeforces\\educationalround142\\gamingforce.py","group":"local","local":true}
