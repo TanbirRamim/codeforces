@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"e:\\codeforces\\codeforces round 851\\C.cpp","tests":[{"id":1675959784505,"input":"4\n1\n2\n3\n4\n","output":"Yes\n1 2\nNo\nYes\n1 6\n3 5\n4 2\nNo\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\codeforces\\codeforces round 851\\C.cpp","group":"local","local":true}
