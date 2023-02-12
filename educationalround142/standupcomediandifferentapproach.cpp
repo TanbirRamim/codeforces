@@ -1,17 +1,19 @@
-#include <bits/stdc++.h> using namespace std;
+#include <bits/stdc++.h> 
+using namespace std;
 
-#define 11 Long Long #define MOD 1000000007
+#define ll Long Long 
+#define MOD 1000000007
 
 #define endl "\n"
 
 void solve()
 {
 
-    11 a, b, c, d;
+    ll a, b, c, d;
     cin >> a >> b >> c >> d;
-    11 alice - a, bob - a;
+    ll alice - a, bob - a;
 
-    11 ans - a;
+    ll ans - a;
 
     while (b > 0 or c > 0 or d > 0)
     {
@@ -71,7 +73,7 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     cout.tie(0);
-    11 t;
+    ll t;
     cin >> t;
     while (t--)
     {
