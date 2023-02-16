@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"e:\\codeforces\\educational round 143\\A.cpp","tests":[{"id":1676559436819,"input":"4\n4 3\nBRBB\nRBR\n4 7\nBRBR\nRRBRBRB\n3 4\nRBR\nBRBR\n5 4\nBRBRR\nBRBR\n","output":"YES\nYES\nYES\nNO\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\codeforces\\educational round 143\\A.cpp","group":"local","local":true}
